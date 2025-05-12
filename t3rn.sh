@@ -21,6 +21,7 @@ while [[ -z "$PRIVATE_KEY_LOCAL" ]]; do
     read -sp "Masukkan PRIVATE_KEY_LOCAL (tidak boleh kosong): " PRIVATE_KEY_LOCAL
     echo ""
 done
+
 # Prompt Gas Price
 while [[ -z "$GAS_PRICE" ]]; do
     read -p "Gas Price (tidak boleh kosong): " GAS_PRICE
@@ -70,13 +71,13 @@ sudo bash -c "cat > $ENV_FILE" <<EOL
 RPC_ENDPOINTS='{
   "l2rn": ["https://t3rn-b2n.blockpi.network/v1/rpc/public", "http://b2n.rpc.caldera.xyz/http"],
   "mont": ["https://testnet-rpc.monad.xyz"],
-  "arbt": ["https://arbitrum-sepolia-rpc.publicnode.com", "https://sepolia-rollup.arbitrum.io/rpc"],
+  "arbt": ["https://arbitrum-sepolia.drpc.org", "https://sepolia-rollup.arbitrum.io/rpc"],
   "bast": ["https://base-sepolia-rpc.publicnode.com", "https://sepolia.base.org"],
-  "blst": ["https://sepolia.blast.io", "https://rpc.ankr.com/blast_testnet_sepolia"],
-  "opst": ["https://optimism-sepolia-rpc.publicnode.com", "https://sepolia.optimism.io"],
-  "unit": ["https://unichain-sepolia-rpc.publicnode.com", "https://sepolia.unichain.org"],
+  "blst": ["https://sepolia.blast.io"],
+  "opst": ["https://sepolia.optimism.io", "https://optimism-sepolia-rpc.publicnode.com"],
+  "unit": ["https://unichain-sepolia.drpc.org", "https://unichain-sepolia-rpc.publicnode.com"],
   "seit": ["https://evm-rpc-testnet.sei-apis.com"],
-  "bsct": ["https://binance-testnet-rpc.publicnode.com/"]
+  "bsct": ["https://binance-testnet-rpc.publicnode.com"]
 }'
 EXECUTOR_MAX_L3_GAS_PRICE="$GAS_PRICE"
 PRIVATE_KEY_LOCAL="$PRIVATE_KEY_LOCAL"

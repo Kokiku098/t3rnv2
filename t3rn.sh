@@ -21,7 +21,6 @@ while [[ -z "$PRIVATE_KEY_LOCAL" ]]; do
     read -sp "Masukkan PRIVATE_KEY_LOCAL (tidak boleh kosong): " PRIVATE_KEY_LOCAL
     echo ""
 done
-
 # Prompt Gas Price
 while [[ -z "$GAS_PRICE" ]]; do
     read -p "Gas Price (tidak boleh kosong): " GAS_PRICE

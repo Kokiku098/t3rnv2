@@ -75,7 +75,7 @@ RPC_ENDPOINTS='{
   "blst": ["https://sepolia.blast.io", "https://rpc.ankr.com/blast_testnet_sepolia"],
   "opst": ["https://optimism-sepolia-rpc.publicnode.com", "https://sepolia.optimism.io"],
   "unit": ["https://unichain-sepolia-rpc.publicnode.com", "https://sepolia.unichain.org"],
-  "seit": ["https://evm-rpc-testnet.sei-apis.com"]
+  "seit": ["https://evm-rpc-testnet.sei-apis.com"],
   "bsct": ["https://binance-testnet-rpc.publicnode.com/"]
 }'
 EXECUTOR_MAX_L3_GAS_PRICE="$GAS_PRICE"

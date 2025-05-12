@@ -37,7 +37,7 @@ done
 INSTALL_DIR="/home/$EXECUTOR_USER/t3rn"
 SERVICE_FILE="/etc/systemd/system/t3rn-executor.service"
 ENV_FILE="/etc/t3rn-executor.env"
-EXECUTOR_VERSION="v0.70.0"
+EXECUTOR_VERSION="v0.77.1"
 EXECUTOR_FILE="executor-linux-$EXECUTOR_VERSION.tar.gz"
 EXECUTOR_URL="https://github.com/t3rn/executor-release/releases/download/$EXECUTOR_VERSION/$EXECUTOR_FILE"
 
@@ -77,12 +77,13 @@ sudo bash -c "cat > $ENV_FILE" <<EOL
 RPC_ENDPOINTS='{
   "l2rn": ["https://t3rn-b2n.blockpi.network/v1/rpc/public", "http://b2n.rpc.caldera.xyz/http"],
   "mont": ["https://testnet-rpc.monad.xyz"],
-  "arbt": ["https://arbitrum-sepolia-rpc.publicnode.com", "https://arb-sepolia.g.alchemy.com/v2/$APIKEY_ALCHEMY"],
-  "bast": ["https://base-sepolia-rpc.publicnode.com", "https://base-sepolia.g.alchemy.com/v2/$APIKEY_ALCHEMY"],
-  "blst": ["https://sepolia.blast.io", "https://blast-sepolia.g.alchemy.com/v2/$APIKEY_ALCHEMY"],
-  "opst": ["https://optimism-sepolia-rpc.publicnode.com", "https://opt-sepolia.g.alchemy.com/v2/$APIKEY_ALCHEMY"],
-  "unit": ["https://unichain-sepolia-rpc.publicnode.com", "https://unichain-sepolia.g.alchemy.com/v2/$APIKEY_ALCHEMY"],
+  "arbt": ["https://arbitrum-sepolia-rpc.publicnode.com", "https://sepolia-rollup.arbitrum.io/rpc"],
+  "bast": ["https://base-sepolia-rpc.publicnode.com", "https://sepolia.base.org"],
+  "blst": ["https://sepolia.blast.io", "https://rpc.ankr.com/blast_testnet_sepolia"],
+  "opst": ["https://optimism-sepolia-rpc.publicnode.com", "https://sepolia.optimism.io"],
+  "unit": ["https://unichain-sepolia-rpc.publicnode.com", "https://sepolia.unichain.org"],
   "seit": ["https://evm-rpc-testnet.sei-apis.com"]
+  "bsct": ["https://binance-testnet-rpc.publicnode.com/"]
 }'
 EXECUTOR_MAX_L3_GAS_PRICE="$GAS_PRICE"
 PRIVATE_KEY_LOCAL="$PRIVATE_KEY_LOCAL"

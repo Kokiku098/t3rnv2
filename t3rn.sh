@@ -22,12 +22,6 @@ while [[ -z "$PRIVATE_KEY_LOCAL" ]]; do
     echo ""
 done
 
-# Prompt Alchemy API
-while [[ -z "$APIKEY_ALCHEMY" ]]; do
-    read -p "API Key Alchemy (tidak boleh kosong): " APIKEY_ALCHEMY
-    echo
-done
-
 # Prompt Gas Price
 while [[ -z "$GAS_PRICE" ]]; do
     read -p "Gas Price (tidak boleh kosong): " GAS_PRICE
